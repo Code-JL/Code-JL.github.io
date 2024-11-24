@@ -1,2 +1,2 @@
 # Code-JL.github.io
-My Personal Portfolio Site
+Here! Check out my [portfolio](https://code-jl.github.io/assets/index.html).
