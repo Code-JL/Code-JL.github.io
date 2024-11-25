@@ -92,8 +92,8 @@ footer {
     color: #fff;
 }
 
-/* Buttons and Links */
-a, button {
+.button {
+    display: inline-block;
     text-decoration: none;
     color: white;
     background: #4db8ff; /* Brighter blue */
@@ -103,7 +103,8 @@ a, button {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-a:hover, button:hover {
+.button:hover {
     background: #0099cc; /* Darker blue */
     transform: scale(1.05);
 }
+
