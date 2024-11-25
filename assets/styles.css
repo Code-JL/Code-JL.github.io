@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #eef6fc; /* Light blue text */
-    background: linear-gradient(to bottom, #2b6da8, #1b4e7e); /* Darker blue gradient */
+    color: #001729; /* Light blue text */
+    background: linear-gradient(to bottom, #b8deff, #7bafdf); /* Darker blue gradient */
 }
 
 /* Header */
 header {
-    background: #17456a; /* Deep navy blue */
+    background: #133653; /* Deep navy blue */
     color: #eef6fc;
     padding: 15px 20px;
     position: sticky;
@@ -41,7 +41,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #1b4e7e; /* Slightly darker blue */
+    background: #133653; /* Slightly darker blue */
     transform: scale(1.05);
 }
 
@@ -71,7 +71,7 @@ h1, h2 {
 .gallery img {
     width: 100%;
     border-radius: 5px;
-    border: 2px solid #1b4e7e; /* Dark blue border */
+    border: 2px solid #112c42; /* Dark blue border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -85,7 +85,7 @@ h1, h2 {
 footer {
     text-align: center;
     padding: 15px 0;
-    background: #17456a; /* Deep navy blue */
+    background: #366c99; /* Deep navy blue */
     color: #eef6fc;
 }
 
