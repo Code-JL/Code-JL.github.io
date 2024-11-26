@@ -45,6 +45,13 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+nav ul li a img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
 /* Section Styling */
 section {
     padding: 40px 20px;
