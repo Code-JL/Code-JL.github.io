@@ -96,6 +96,13 @@ footer {
     color: #eef6fc;
 }
 
+footer img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
 footer a {
     color: rgb(167, 150, 0);
 }
