@@ -96,6 +96,14 @@ footer {
     color: #eef6fc;
 }
 
+footer a {
+    color: rgb(167, 150, 0);
+}
+
+footer a:visited {
+    color: rgb(128, 58, 0);
+}
+
 /* Buttons and Links */
 .button {
     display: inline-block;
