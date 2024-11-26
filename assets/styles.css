@@ -18,6 +18,12 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+header nav ul li a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    vertical-align: text-top;
+}
 
 nav ul {
     list-style: none;
@@ -45,12 +51,6 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-nav ul li a img {
-    width: 32px;
-    height: 32px;
-    margin-right: 4px;
-    vertical-align: text-top;
-}
 
 /* Section Styling */
 section {
