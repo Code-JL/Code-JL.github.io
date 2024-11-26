@@ -46,10 +46,10 @@ nav ul li a:hover {
 }
 
 nav ul li a img {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     margin-right: 4px;
-    vertical-align: middle;
+    vertical-align: text-top;
 }
 
 /* Section Styling */
