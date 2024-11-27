@@ -71,7 +71,7 @@ h1, h2 {
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -97,18 +97,16 @@ footer {
 }
 
 .contact p a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
-    vertical-align: middle;
+    width: 25px; 
+    height: 25px;
+    margin-right: 8px;
 }
 
 .contact p a {
-    color: rgb(167, 150, 0);
+    color: #d8cf4e;
 }
-
 .contact p a:visited {
-    color: rgb(128, 58, 0);
+    color: #dfa843; 
 }
 
 /* Buttons and Links */
