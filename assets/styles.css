@@ -126,13 +126,6 @@ footer {
     transform: scale(1.05);
 }
 
-/* Images and Text */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px 0;
-}
 
   .wrapper {
     max-width: 800px;
