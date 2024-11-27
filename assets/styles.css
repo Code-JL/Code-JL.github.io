@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #001729; /* Light blue text */
-    background: linear-gradient(to bottom, #b8deff, #519de4, #136cc0); 
+    background: linear-gradient(to bottom, #b8deff, #519de4, #004b91); 
 }
 
 /* Header */
@@ -96,16 +96,16 @@ footer {
     color: #eef6fc;
 }
 
-.contact p a img {
+section#contact p a img {
     width: 25px; 
     height: 25px;
     margin-right: 8px;
 }
 
-.contact p a {
+section#contact p a {
     color: #d8cf4e;
 }
-.contact p a:visited {
+section#contact p a:visited {
     color: #dfa843; 
 }
 
