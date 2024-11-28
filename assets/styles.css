@@ -6,7 +6,6 @@
          url('../fonts/rampage-monoline.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-size: large;
 }
 @font-face {
     font-family: 'roboto';
@@ -14,7 +13,6 @@
          url('../fonts/roboto.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-size: large;
 }
 
 /* General Styling */
@@ -58,6 +56,7 @@ nav ul li {
 
 nav ul li a {
     font-family: 'rampage-monoline', sans-serif;
+    font-size: 20px;
     color: #a9d3f5; /* Lighter blue */
     text-decoration: none;
     padding: 5px 10px;
@@ -86,6 +85,12 @@ title {
     font-family: 'rampage-monoline', sans-serif;
 }
 
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+}
 h1, h2 {
     font-family: 'rampage-monoline', sans-serif;
     color: #eef6fc;
@@ -128,6 +133,8 @@ section#contact p a img {
 }
 
 section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 20px;
     color: #e7df69;
 }
 section#contact p a:visited {
