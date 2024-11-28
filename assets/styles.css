@@ -1,6 +1,23 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'dakota-motors';
+    src: url('../fonts/dakota-motors.woff2') format('woff2'),
+         url('../fonts/dakota-motors.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto.woff2') format('woff2'),
+         url('../fonts/roboto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -38,9 +55,10 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'dakota-motors', sans-serif;
+    font-weight: bold;
     color: #a9d3f5; /* Lighter blue */
     text-decoration: none;
-    font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -63,7 +81,12 @@ section {
     color: #eef6fc; /* Text in sections stays light blue */
 }
 
+title {
+    font-family: 'dakota-motors', sans-serif;
+}
+
 h1, h2 {
+    font-family: 'dakota-motors', sans-serif;
     color: #eef6fc;
     text-align: center;
 }
