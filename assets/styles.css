@@ -1,9 +1,9 @@
 /* Fonts */
 
 @font-face {
-    font-family: 'dakota-motors';
-    src: url('../fonts/dakota-motors.woff2') format('woff2'),
-         url('../fonts/dakota-motors.woff') format('woff');
+    font-family: 'rampage-monoline';
+    src: url('../fonts/rampage-monoline.woff2') format('woff2'),
+         url('../fonts/rampage-monoline.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -55,8 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'dakota-motors', sans-serif;
-    font-weight: bold;
+    font-family: 'rampage-monoline', sans-serif;
     color: #a9d3f5; /* Lighter blue */
     text-decoration: none;
     padding: 5px 10px;
@@ -82,11 +81,11 @@ section {
 }
 
 title {
-    font-family: 'dakota-motors', sans-serif;
+    font-family: 'rampage-monoline', sans-serif;
 }
 
 h1, h2 {
-    font-family: 'dakota-motors', sans-serif;
+    font-family: 'rampage-monoline', sans-serif;
     color: #eef6fc;
     text-align: center;
 }
