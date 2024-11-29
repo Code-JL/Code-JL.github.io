@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: 'rampage-monoline';
-    src: url('../fonts/rampage-monoline.woff2') format('woff2'),
-         url('../fonts/rampage-monoline.woff') format('woff');
+    src: url('../../fonts/rampage-monoline.woff2') format('woff2'),
+         url('../../fonts/rampage-monoline.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto.woff2') format('woff2'),
-         url('../fonts/roboto.woff') format('woff');
+    src: url('../../fonts/roboto.woff2') format('woff2'),
+         url('../../fonts/roboto.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
