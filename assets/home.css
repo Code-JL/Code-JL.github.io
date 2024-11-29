@@ -1,21 +1,4 @@
 
-/* Header */
-header {
-    background: #2573b3; /* Deep navy blue */
-    color: #eef6fc;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-header nav ul li a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
-    vertical-align: middle;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
