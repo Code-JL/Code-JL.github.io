@@ -69,3 +69,23 @@ nav ul li a:hover {
     background: #133653; /* Slightly darker blue */
     transform: scale(1.05);
 }
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#bg1 {
+	z-index: -1;
+    filter: blur(1px);
+}
+
+@media screen and (min-width: 500px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+}
