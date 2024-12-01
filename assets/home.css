@@ -2,7 +2,7 @@
 
 /* Section Styling */
 section {
-    padding: 20px 20px;
+    padding: 40px 20px;
     margin: 20px auto;
     max-width: 900px;
     background: #414141; /* Medium blue */
@@ -16,7 +16,7 @@ title {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 100px;
 }
 h2 {
     font-size: 60px;
