@@ -1,0 +1,46 @@
+section#contact p a img {
+    width: 50px; 
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: #e7df69;
+}
+
+section.title {
+    width: 30%;
+}
+
+section {
+    width: 50%;
+}
+li a {
+    color: #e7df69;
+}
+section#contact p a:visited, li a {
+    color: #dfa843; 
+}
+
+li, p {
+    font-size: 18px
+}
+
+h1 {
+    font-size: 85px;
+}
+h2 {
+    font-size: 55px;
+}
+h3 {
+    font-size: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px; /* Space between grid items */
+}
