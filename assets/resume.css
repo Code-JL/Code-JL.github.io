@@ -1,3 +1,93 @@
+  /* Fonts */
+
+@font-face {
+  font-family: 'rampage-monoline';
+  src: url('../../fonts/rampage-monoline.woff2') format('woff2'),
+       url('../../fonts/rampage-monoline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../../fonts/roboto.woff2') format('woff2'),
+       url('../../fonts/roboto.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header */
+header {
+  background: #1e5c8f; /* Deep navy blue */
+  color: #eef6fc;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header nav ul li a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  font-family: 'rampage-monoline', sans-serif;
+  font-size: 30px;
+  color: #a9d3f5; /* Lighter blue */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  background: #133653; /* Slightly darker blue */
+  transform: scale(1.05);
+}
+
+/* General Styling */
+body {
+  font-family: 'roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #001729; /* Light blue text */
+  background: linear-gradient(to bottom, #6daae4, #175792, #571194); 
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#bg1 {
+  z-index: -1;
+  filter: blur(1px);
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
   
   .container {
     max-width: 800px;

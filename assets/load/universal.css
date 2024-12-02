@@ -15,15 +15,8 @@
     font-style: normal;
 }
 
-
-/* General Styling */
-body {
-    font-family: 'roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #001729; /* Light blue text */
-    background: linear-gradient(to bottom, #6daae4, #175792, #571194); 
+title {
+    font-family: 'rampage-monoline', sans-serif;
 }
 
 /* Header */
@@ -68,6 +61,57 @@ nav ul li a {
 nav ul li a:hover {
     background: #133653; /* Slightly darker blue */
     transform: scale(1.05);
+}
+
+/* General Styling */
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #001729; /* Light blue text */
+    background: linear-gradient(to bottom, #6daae4, #175792, #571194); 
+}
+
+h1, h2, h3 {
+    font-family: 'rampage-monoline', sans-serif;
+    color: #eef6fc;
+    text-align: center;
+}
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 60%;
+    background: #414141; /* Medium blue */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #eef6fc; /* Text in sections stays light blue */
+}
+
+/* Buttons and Links */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #eef6fc; /* Light blue text */
+    background: #1b4e7e; /* Dark blue button */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: #17456a; /* Slightly darker navy */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #366c99; /* Deep navy blue */
+    color: #eef6fc;
 }
 
 canvas {
