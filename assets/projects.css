@@ -1,0 +1,36 @@
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+li, p {
+    font-size: 18px
+}
+
+h1 {
+    font-size: 85px;
+}
+h2 {
+    font-size: 55px;
+}
+h3 {
+    font-size: 40px;
+}
+
+section#contact p a img {
+    width: 50px; 
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: #e7df69;
+}
+section#contact p a:visited {
+    color: #dfa843; 
+}
