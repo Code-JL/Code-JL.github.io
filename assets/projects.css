@@ -1,8 +1,12 @@
 
 .project img {
-    width: 100%;
+    width: 70%;
     border-radius: 5px;
     margin-bottom: 15px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
 }
 
 li, p {
@@ -33,4 +37,7 @@ section#contact p a {
 }
 section#contact p a:visited {
     color: #dfa843; 
+}
+section.title {
+    width: 30%;
 }
