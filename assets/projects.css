@@ -45,8 +45,3 @@ section#contact p a {
 section#contact p a:visited {
 	color: #dfa843; /* Alternate color for visited links */
 }
-
-/* Section Sizing */
-section.title {
-	width: 30%;
-}

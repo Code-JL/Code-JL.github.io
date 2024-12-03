@@ -91,6 +91,11 @@ section {
 	color: #eef6fc;
 }
 
+/* Section Sizing */
+section.title {
+	width: 30%;
+}
+
 /* Buttons and Links */
 .button {
 	display: inline-block;
