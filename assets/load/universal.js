@@ -177,3 +177,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		opacity: 0.6
 	});
 });
+
+
+
+var string = "Joseph JP Lavoie";
+var array = string.split("");
+var timer;
+
+function frameLooper () {
+	if (array.length > 0) {
+		document.getElementById("type").innerHTML += array.shift();
+	} else {
+		clearTimeout(timer);
+			}
+	loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
+
+}
+frameLooper();
