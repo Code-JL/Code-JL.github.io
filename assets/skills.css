@@ -1,46 +1,55 @@
+/* Contact Section Styling */
 section#contact p a img {
-    width: 50px; 
-    height: 50px;
-    margin-right: 8px;
-    vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	margin-right: 8px;
+	vertical-align: middle; /* Aligns icons with text */
 }
 
 section#contact p a {
-    font-family: 'rampage-monoline', sans-serif;
-    font-size: 30px;
-    color: #e7df69;
+	font-family: 'rampage-monoline', sans-serif;
+	font-size: 30px;
+	color: #e7df69; /* Bright yellow text */
 }
 
+section#contact p a:visited, li a {
+	color: #dfa843; /* Alternate color for visited links */
+}
+
+/* Section Sizing */
 section.title {
-    width: 30%;
+	width: 30%;
 }
 
 section {
-    width: 50%;
-}
-li a {
-    color: #e7df69;
-}
-section#contact p a:visited, li a {
-    color: #dfa843; 
+	width: 50%;
 }
 
+/* Link Styling */
+li a {
+	color: #e7df69; /* Bright yellow for list links */
+}
+
+/* Typography */
 li, p {
-    font-size: 18px
+	font-size: 18px; /* Standard font size */
 }
 
 h1 {
-    font-size: 85px;
-}
-h2 {
-    font-size: 55px;
-}
-h3 {
-    font-size: 40px;
+	font-size: 85px; /* Large heading */
 }
 
+h2 {
+	font-size: 55px; /* Medium heading */
+}
+
+h3 {
+	font-size: 40px; /* Small heading */
+}
+
+/* Grid Layout */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px; /* Space between grid items */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+	gap: 16px; /* Space between grid items */
 }

@@ -1,48 +1,49 @@
+// Wait for the DOM content to fully load
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('load/header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector('header').innerHTML = data;
-        });
+	fetch('load/header.html') // Fetch the header HTML from the server
+		.then(response => response.text())
+		.then(data => {
+			document.querySelector('header').innerHTML = data; // Inject the header content
+		});
 });
 
+// Include the 'matter-wrap' plugin
 Matter.use('matter-wrap');
 
+// HexBokeh: A customizable background effect using Matter.js
 let hexBokeh = {
-	// customizable options (passed into init function)
-    options: {
-		canvasSelector: '',				// to find <canvas> in DOM to draw on
-		radiusRange: [30, 60],			// random range of body radii
-		xVarianceRange: [0.1, 0.3],		// random range of x velocity scaling on bodies
-		yVarianceRange: [0.5, 1.5],		// random range of y velocity scaling on bodies
-		airFriction: 0.03,				// air friction of bodies
-		opacity: 0.5,					// opacity of bodies
-		collisions: false,				// do bodies collide or pass through
-		scrollVelocity: 0.025,			// scaling of scroll delta to velocity applied to bodies
-		pixelsPerBody: 40000,			// viewport pixels required for each body added
-
-		// colors to cycle through to fill bodies
-		colors: ['#7ef2cf', '#bea6ff', '#8ccdff']
+	// Default options for customization
+	options: {
+		canvasSelector: '', // CSS selector for the canvas element
+		radiusRange: [30, 60], // Random range of hexagon radii
+		xVarianceRange: [0.1, 0.3], // X velocity scaling range
+		yVarianceRange: [0.5, 1.5], // Y velocity scaling range
+		airFriction: 0.03, // Air friction applied to the bodies
+		opacity: 0.5, // Opacity of the hexagons
+		collisions: false, // Enable or disable collisions
+		scrollVelocity: 0.025, // Effect of scroll on body velocities
+		pixelsPerBody: 40000, // Pixels in viewport per hexagon
+		colors: ['#7ef2cf', '#bea6ff', '#8ccdff'] // Hexagon fill colors
 	},
 
-	// throttling intervals (in ms)
+	// Delays for scroll and resize event throttling
 	scrollDelay: 100,
 	resizeDelay: 400,
 
-	// throttling variables and timeouts
+	// Variables to track event state
 	lastOffset: undefined,
 	scrollTimeout: undefined,
 	resizeTimeout: undefined,
 
-	// Matter.js objects
+	// Matter.js components
 	engine: undefined,
 	render: undefined,
 	runner: undefined,
 	bodies: undefined,
 
-	// kicks things off
+	// Initialize the effect
 	init(options) {
-		// override default options with incoming options
+		// Merge provided options with defaults
 		this.options = Object.assign({}, this.options, options);
 
 		let viewportWidth = document.documentElement.clientWidth;
@@ -51,12 +52,12 @@ let hexBokeh = {
 		this.lastOffset = window.pageYOffset;
 		this.scrollTimeout = null;
 		this.resizeTimeout = null;
-	
-		// engine
+
+		// Create Matter.js engine
 		this.engine = Matter.Engine.create();
 		this.engine.world.gravity.y = 0;
-	
-		// render
+
+		// Create renderer
 		this.render = Matter.Render.create({
 			canvas: document.querySelector(this.options.canvasSelector),
 			engine: this.engine,
@@ -68,12 +69,12 @@ let hexBokeh = {
 			}
 		});
 		Matter.Render.run(this.render);
-	
-		// runner
+
+		// Create runner
 		this.runner = Matter.Runner.create();
 		Matter.Runner.run(this.runner, this.engine);
-	
-		// bodies
+
+		// Create and add bodies to the engine
 		this.bodies = [];
 		let totalBodies = Math.round(viewportWidth * viewportHeight / this.options.pixelsPerBody);
 		for (let i = 0; i <= totalBodies; i++) {
@@ -82,12 +83,12 @@ let hexBokeh = {
 		}
 		Matter.World.add(this.engine.world, this.bodies);
 
-		// events
+		// Attach event listeners for scroll and resize
 		window.addEventListener('scroll', this.onScrollThrottled.bind(this));
 		window.addEventListener('resize', this.onResizeThrottled.bind(this));
 	},
-	
-	// stop all the things
+
+	// Shutdown and clean up the engine
 	shutdown() {
 		Matter.Engine.clear(this.engine);
 		Matter.Render.stop(this.render);
@@ -96,20 +97,20 @@ let hexBokeh = {
 		window.removeEventListener('scroll', this.onScrollThrottled);
 		window.removeEventListener('resize', this.onResizeThrottled);
 	},
-	
-	// random number generator
+
+	// Generate a random number within a range
 	randomize(range) {
 		let [min, max] = range;
 		return Math.random() * (max - min) + min;
 	},
-	
-	// create body with some random parameters
+
+	// Create a hexagonal body with random properties
 	createBody(viewportWidth, viewportHeight) {
 		let x = this.randomize([0, viewportWidth]);
 		let y = this.randomize([0, viewportHeight]);
 		let radius = this.randomize(this.options.radiusRange);
 		let color = this.options.colors[this.bodies.length % this.options.colors.length];
-	
+
 		return Matter.Bodies.polygon(x, y, 6, radius, {
 			render: {
 				fillStyle: color,
@@ -127,18 +128,18 @@ let hexBokeh = {
 			}
 		});
 	},
-	
-	// enforces throttling of scroll handler
+
+	// Handle scroll events (throttled)
 	onScrollThrottled() {
 		if (!this.scrollTimeout) {
 			this.scrollTimeout = setTimeout(this.onScroll.bind(this), this.scrollDelay);
 		}
 	},
-	
-	// applies velocity to bodies based on scrolling with some randomness
+
+	// Update body velocities based on scroll movement
 	onScroll() {
 		this.scrollTimeout = null;
-	
+
 		let delta = (this.lastOffset - window.pageYOffset) * this.options.scrollVelocity;
 		this.bodies.forEach((body) => {
 			Matter.Body.setVelocity(body, {
@@ -146,34 +147,33 @@ let hexBokeh = {
 				y: body.velocity.y + delta * this.randomize(this.options.yVarianceRange)
 			});
 		});
-	
+
 		this.lastOffset = window.pageYOffset;
 	},
-	
-	// enforces throttling of resize handler
+
+	// Handle resize events (throttled)
 	onResizeThrottled() {
 		if (!this.resizeTimeout) {
 			this.resizeTimeout = setTimeout(this.onResize.bind(this), this.resizeDelay);
 		}
 	},
-	
-	// restart everything with the new viewport size
+
+	// Restart the engine with updated dimensions
 	onResize() {
 		this.shutdown();
 		this.init();
 	}
 };
 
-// wait for DOM to load
+// Wait for the DOM content to load and initialize HexBokeh
 window.addEventListener('DOMContentLoaded', () => {
-	// start first hex bokeh background
 	Object.create(hexBokeh).init({
 		canvasSelector: '#bg1',
-    radiusRange: [15, 80],
-    colors: ['#571194', '#660066', '#000000', '000099', '193366'],
-    pixelsPerBody: 20000,
-    scrollVelocity: 0.01,
-    airFriction: 0.05,
-    opacity: 0.6
-    });
+		radiusRange: [15, 80],
+		colors: ['#571194', '#660066', '#000000', '#000099', '#193366'],
+		pixelsPerBody: 20000,
+		scrollVelocity: 0.01,
+		airFriction: 0.05,
+		opacity: 0.6
+	});
 });
