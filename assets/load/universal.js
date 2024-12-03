@@ -180,17 +180,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-var string = "Joseph JP Lavoie";
+// Get the text content from the element with ID "type"
+var string = document.getElementById("type").textContent;
 var array = string.split("");
 var timer;
 
-function frameLooper () {
+function frameLooper() {
 	if (array.length > 0) {
+		// Append each character to the element with ID "type"
 		document.getElementById("type").innerHTML += array.shift();
 	} else {
+		// Clear the timer when the string is fully typed
 		clearTimeout(timer);
-			}
-	loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
-
+	}
+	// Call the function again after the specified delay (70ms in this case)
+	timer = setTimeout(frameLooper, 70); // change 70 for speed
 }
+
+// Clear the initial text in the "type" element and start the typing effect
+document.getElementById("type").innerHTML = "";
 frameLooper();
