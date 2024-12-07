@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects - Inventory Manager</title>
+	<link rel="stylesheet" href="../../assets/load/universal.css">
+	<link rel="stylesheet" href="about.css">
+</head>
+<body>
+	<header></header>
+	<main>
+		<!-- Project Title -->
+		<section class="title">
+			<h1 id="type">Inventory Manager</h1>
+			<p>A <strong>C++ Inventory Management Program</strong> designed to handle a collection of items with various attributes. This application includes item tracking, inventory persistence, and a graphical user interface (GUI) for ease of use.</p>
+		</section>
+
+		<!-- Features Section -->
+		<section class="project">
+			<h2>Features</h2>
+			<ul>
+				<li><strong>Item Management:</strong> Store multiple items with properties like name, description, image, and count.</li>
+				<li><strong>Item Quantity Adjustments:</strong> Increase or decrease quantities, or delete items.</li>
+				<li><strong>Inventory Persistence:</strong> Save and load inventory data from files, with a default sample provided.</li>
+				<li><strong>Graphical User Interface (GUI):</strong> Intuitive interface with tabs for saving/loading inventories, item details, and help.</li>
+			</ul>
+		</section>
+
+		<!-- Planned Structure -->
+		<section class="project">
+			<h2>Planned Structure</h2>
+			<h3>Item Object</h3>
+			<p>Each item will be stored as an object with attributes such as name, description, count, and image.</p>
+			<h3>Functions</h3>
+			<ul>
+				<li>Add a new item to the inventory.</li>
+				<li>Delete an item from the inventory.</li>
+				<li>Adjust the quantity of an item.</li>
+				<li>Save or load inventory data from files.</li>
+			</ul>
+			<h3>GUI Implementation</h3>
+			<ul>
+				<li>Scrollable list of items with tabs for file operations, new inventory creation, and help.</li>
+				<li>Detailed view of items with options for editing or deletion.</li>
+			</ul>
+		</section>
+
+		<!-- Getting Started -->
+		<section class="project">
+			<h2>Getting Started</h2>
+			<h3>Prerequisites</h3>
+			<p>A C++ compiler (e.g., GCC, Clang, or MSVC) and a GUI framework (e.g., Qt, wxWidgets, or SFML).</p>
+			<h3>Building the Project</h3>
+			<ol>
+				<li>Clone the repository:
+					<pre>
+<code>git clone https://github.com/Code-JL/Inventory-Manager</code>
+					</pre>
+				</li>
+				<li>Build the project using your preferred build system:
+					<pre>
+<code>mkdir build
+cd build
+cmake ..
+make</code>
+					</pre>
+				</li>
+			</ol>
+		</section>
+
+		<!-- Future Enhancements -->
+		<section class="project">
+			<h2>Future Enhancements</h2>
+			<ul>
+				<li>Support for item images.</li>
+				<li>Advanced search and filtering options.</li>
+				<li>Export inventory data to formats like CSV or JSON.</li>
+			</ul>
+		</section>
+
+		<!-- Help and Documentation -->
+		<section id="contact">
+			<h2>Help and Documentation</h2>
+			<p><a href="help.pdf" target="_blank">PDF Manual</a></p>
+			<p><a href="https://github.com/Code-JL/Inventory-Manager" target="_blank">GitHub Repository</a></p>
+		</section>
+
+		<!-- License -->
+		<section class="project">
+			<h2>License</h2>
+			<p>This project is licensed under the MIT License. See the <a href="LICENSE" target="_blank">LICENSE</a> file for details.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>© 2024 Inventory Manager Project</p>
+	</footer>
+
+	<canvas id="bg1"></canvas>
+
+	<!-- External JS Libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
+	<script src="../../assets/load/universal.js"></script>
+</body>
+</html>
