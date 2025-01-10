@@ -89,6 +89,12 @@ section {
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 	color: #eef6fc;
+	border-left: 3px solid #e7df69;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateX(10px);
 }
 
 /* Section Sizing */
