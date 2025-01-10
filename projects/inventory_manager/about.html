@@ -1,107 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Projects - Inventory Manager</title>
-	<link rel="stylesheet" href="../../assets/load/universal.css">
-	<link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Inventory Manager</title>
+    <link rel="stylesheet" href="../../assets/load/universal.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-	<header></header>
-	<main>
-		<!-- Project Title -->
-		<section class="title">
-			<h1 id="type">Inventory Manager</h1>
-			<p>A <strong>C++ Inventory Management Program</strong> designed to handle a collection of items with various attributes. This application includes item tracking, inventory persistence, and a graphical user interface (GUI) for ease of use.</p>
+    <header></header>
+    <main>
+        <!-- Project Title -->
+        <section class="title">
+            <h1 id="type">GUI Inventory Manager</h1>
+            <p>A cross-platform <strong>C++ Inventory Management Program</strong> built with wxWidgets, designed to efficiently handle collections of items across Linux, macOS, and Windows.</p>
+        </section>
+
+        <!-- Technologies -->
+        <section class="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-grid">
+                <span class="tech-badge">C++17</span>
+                <span class="tech-badge">wxWidgets</span>
+                <span class="tech-badge">Visual Studio</span>
+                <span class="tech-badge">CMake</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Cross-Platform Compatibility:</strong> Works seamlessly on Linux, macOS, and Windows</li>
+                <li><strong>Customizable Attributes:</strong> Add, edit, or remove attributes for inventory items</li>
+                <li><strong>Search and Filter:</strong> Quickly locate items with advanced search options</li>
+                <li><strong>Data Persistence:</strong> Save and load inventory data from local files</li>
+                <li><strong>Intuitive Interface:</strong> Clean and responsive design using wxWidgets</li>
+            </ul>
+        </section>
+
+        <!-- Implementation -->
+        <section class="project">
+            <h2>Implementation</h2>
+            <h3>Core Components</h3>
+            <ul>
+                <li>Modern C++17 features for robust implementation</li>
+                <li>wxWidgets framework for cross-platform GUI</li>
+                <li>Custom data structures for efficient item management</li>
+                <li>File I/O handling for data persistence</li>
+            </ul>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="project">
+            <h2>Getting Started</h2>
+            <h3>Prerequisites</h3>
+            <p>Ensure you have:</p>
+            <ul>
+                <li>C++17 compatible compiler</li>
+                <li>wxWidgets library installed</li>
+                <li>Visual Studio 2022 (for Windows users)</li>
+            </ul>
+            <h3>Installation</h3>
+            <pre><code>git clone https://github.com/Code-JL/GUI-Inventory-Manager.git
+cd GUI-Inventory-Manager</code></pre>
+        </section>
+
+        <!-- Documentation -->
+        <section id="contact">
+            <h2>Resources</h2>
+            <p><a href="https://github.com/Code-JL/GUI-Inventory-Manager" target="_blank">
+                <img src="../../images/github.png" alt="GitHub Icon">GitHub Repository
+            </a></p>
+        </section>
+
+        <!-- License -->
+        <section class="project">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License. See the <a href="https://github.com/Code-JL/GUI-Inventory-Manager/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
 		</section>
+    </main>
 
-		<!-- Features Section -->
-		<section class="project">
-			<h2>Features</h2>
-			<ul>
-				<li><strong>Item Management:</strong> Store multiple items with properties like name, description, image, and count.</li>
-				<li><strong>Item Quantity Adjustments:</strong> Increase or decrease quantities, or delete items.</li>
-				<li><strong>Inventory Persistence:</strong> Save and load inventory data from files, with a default sample provided.</li>
-				<li><strong>Graphical User Interface (GUI):</strong> Intuitive interface with tabs for saving/loading inventories, item details, and help.</li>
-			</ul>
-		</section>
+    <footer>
+        <p>© 2025 GUI Inventory Manager</p>
+    </footer>
 
-		<!-- Planned Structure -->
-		<section class="project">
-			<h2>Planned Structure</h2>
-			<h3>Item Object</h3>
-			<p>Each item will be stored as an object with attributes such as name, description, count, and image.</p>
-			<h3>Functions</h3>
-			<ul>
-				<li>Add a new item to the inventory.</li>
-				<li>Delete an item from the inventory.</li>
-				<li>Adjust the quantity of an item.</li>
-				<li>Save or load inventory data from files.</li>
-			</ul>
-			<h3>GUI Implementation</h3>
-			<ul>
-				<li>Scrollable list of items with tabs for file operations, new inventory creation, and help.</li>
-				<li>Detailed view of items with options for editing or deletion.</li>
-			</ul>
-		</section>
+    <canvas id="bg1"></canvas>
 
-		<!-- Getting Started -->
-		<section class="project">
-			<h2>Getting Started</h2>
-			<h3>Prerequisites</h3>
-			<p>A C++ compiler (e.g., GCC, Clang, or MSVC) and a GUI framework (e.g., Qt, wxWidgets, or SFML).</p>
-			<h3>Building the Project</h3>
-			<ol>
-				<li>Clone the repository:
-					<pre>
-<code>git clone https://github.com/Code-JL/Inventory-Manager</code>
-					</pre>
-				</li>
-				<li>Build the project using your preferred build system:
-					<pre>
-<code>mkdir build
-cd build
-cmake ..
-make</code>
-					</pre>
-				</li>
-			</ol>
-		</section>
-
-		<!-- Future Enhancements -->
-		<section class="project">
-			<h2>Future Enhancements</h2>
-			<ul>
-				<li>Support for item images.</li>
-				<li>Advanced search and filtering options.</li>
-				<li>Export inventory data to formats like CSV or JSON.</li>
-			</ul>
-		</section>
-
-		<!-- Help and Documentation -->
-		<section id="contact">
-			<h2>Help and Documentation</h2>
-			<p><a href="help.pdf" target="_blank">PDF Manual</a></p>
-			<p><a href="https://github.com/Code-JL/Inventory-Manager" target="_blank">GitHub Repository</a></p>
-		</section>
-
-		<!-- License -->
-		<section class="project">
-			<h2>License</h2>
-			<p>This project is licensed under the MIT License. See the <a href="LICENSE" target="_blank">LICENSE</a> file for details.</p>
-		</section>
-	</main>
-
-	<footer>
-		<p>© 2024 Inventory Manager Project</p>
-	</footer>
-
-	<canvas id="bg1"></canvas>
-
-	<!-- External JS Libraries -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
-	<script src="../projectsUniversal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
+    <script src="../projectsUniversal.js"></script>
 </body>
 </html>
