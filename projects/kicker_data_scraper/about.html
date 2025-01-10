@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - NFL Point Kicker Data Scraper</title>
+    <link rel="stylesheet" href="../../assets/load/universal.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <!-- Project Title -->
+        <section class="title">
+            <h1 id="type">NFL Point Kicker Data Scraper</h1>
+            <p>A sophisticated <strong>Python-based web scraping toolkit</strong> that extracts and processes NFL kicking statistics from Pro-Football-Reference, focusing on field goal attempts and environmental conditions.</p>
+        </section>
+
+        <!-- Technologies -->
+        <section class="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-grid">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">BeautifulSoup4</span>
+                <span class="tech-badge">CSV</span>
+                <span class="tech-badge">Web Scraping</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Comprehensive Data Collection:</strong> Gathers stadium info, roof type, playing surface, and weather conditions</li>
+                <li><strong>Intelligent Processing:</strong> Rate limiting, incremental saving, and error recovery systems</li>
+                <li><strong>Multiple Output Formats:</strong> Specialized CSV files for various analysis scenarios</li>
+                <li><strong>Environmental Analysis:</strong> Detailed weather and facility condition tracking</li>
+            </ul>
+        </section>
+
+        <!-- Implementation -->
+        <section class="project">
+            <h2>Implementation</h2>
+            <h3>Processing Pipeline</h3>
+            <pre><code>1. FootballInfoScraper.py      → Initialize and collect URLs
+2. FootballGameInfoScraper.py  → Extract game data
+3. GameUrlDateSeparator.py     → Process game dates
+4. DateToCSVFormat.py          → Standardize formats
+5. TotalDataFormatting.py      → Create master dataset
+6. SplitDataFormatting.py      → Generate analysis files</code></pre>
+
+            <h3>Output Files</h3>
+            <ul>
+                <li>Complete dataset (2000-2022)</li>
+                <li>Weather-specific analysis</li>
+                <li>Dome-specific analysis</li>
+                <li>Wind chill impact analysis</li>
+            </ul>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="project">
+            <h2>Technical Highlights</h2>
+            <h3>Data Fields Collected</h3>
+            <ul>
+                <li>Game dates and locations</li>
+                <li>Stadium characteristics</li>
+                <li>Environmental conditions</li>
+                <li>Kicking performance metrics</li>
+            </ul>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Automated rate limiting to prevent IP bans</li>
+                <li>Incremental data saving for reliability</li>
+                <li>Comprehensive error handling</li>
+                <li>Multiple analysis-ready output formats</li>
+            </ul>
+        </section>
+
+        <!-- Documentation -->
+        <section id="contact">
+            <h2>Resources</h2>
+            <p><a href="https://github.com/Code-JL/NFL-Point-Kicker-Data-Scraper" target="_blank">
+                <img src="../../images/github.png" alt="GitHub Icon">GitHub Repository
+            </a></p>
+        </section>
+
+        <!-- License -->
+        <section class="project">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License. See the <a href="https://github.com/Code-JL/NFL-Point-Kicker-Data-Scraper/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 NFL Point Kicker Data Scraper</p>
+    </footer>
+
+    <canvas id="bg1"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
+    <script src="../projectsUniversal.js"></script>
+</body>
+</html>

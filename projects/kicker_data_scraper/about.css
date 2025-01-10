@@ -1,0 +1,75 @@
+/* Project Styling */
+.project img {
+    width: 70%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Technology Badges */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tech-badge {
+    background: #1b4e7e;
+    color: #eef6fc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 2px solid #e7df69;
+}
+
+/* Code Blocks */
+pre {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    border-left: 3px solid #e7df69;
+    margin: 15px 0;
+}
+
+code {
+    color: #e7df69;
+    font-family: 'Consolas', monospace;
+}
+
+/* Typography */
+li, p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 85px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 40px;
+    text-align: left;
+}
+
+/* Contact Section */
+section#contact p a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: #e7df69;
+}
+
+section#contact p a:visited {
+    color: #dfa843;
+}
