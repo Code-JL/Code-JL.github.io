@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - DNA Sequence Analyzer</title>
+    <link rel="stylesheet" href="../../assets/load/universal.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <!-- Project Title -->
+        <section class="title">
+            <h1 id="type">DNA Sequence Analyzer</h1>
+            <p>A robust <strong>Python-based bioinformatics tool</strong> for comprehensive DNA sequence analysis and manipulation, featuring advanced pattern recognition and gene detection capabilities.</p>
+        </section>
+
+        <!-- Technologies -->
+        <section class="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-grid">
+                <span class="tech-badge">Python 3.8+</span>
+                <span class="tech-badge">pytest</span>
+                <span class="tech-badge">FASTA</span>
+                <span class="tech-badge">CLI</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>GC Content Analysis:</strong> Precise calculation of GC content percentage in DNA sequences</li>
+                <li><strong>Nucleotide Distribution:</strong> Detailed analysis of nucleotide frequencies</li>
+                <li><strong>Pattern Recognition:</strong> Advanced motif finding with position reporting</li>
+                <li><strong>Sequence Manipulation:</strong> Generate complement and reverse complement sequences</li>
+                <li><strong>Gene Detection:</strong> Identify potential coding regions using start/stop codons</li>
+                <li><strong>FASTA Support:</strong> Full compatibility with standard FASTA file format</li>
+            </ul>
+        </section>
+
+        <!-- Implementation -->
+        <section class="project">
+            <h2>Implementation</h2>
+            <h3>Project Structure</h3>
+            <pre><code>dna_analyzer/
+├── src/
+│   ├── sequence_analyzer.py
+│   ├── utils.py
+│   └── main.py
+├── tests/
+│   └── test_analyzer.py
+├── data/
+│   ├── example1.fasta
+│   └── example2.fasta
+└── docs/</code></pre>
+            
+            <h3>Usage Example</h3>
+            <pre><code># Basic Analysis
+python src/main.py -i data/example1.fasta -o results.txt -a
+
+# Motif Search
+python src/main.py -i data/example2.fasta -m ATCG -o motif_results.txt</code></pre>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="project">
+            <h2>Technical Highlights</h2>
+            <ul>
+                <li>Modular architecture for easy extension and maintenance</li>
+                <li>Comprehensive test coverage using pytest</li>
+                <li>Efficient sequence processing algorithms</li>
+                <li>Command-line interface for automated analysis</li>
+                <li>Support for multiple input sequence formats</li>
+            </ul>
+        </section>
+
+        <!-- Documentation -->
+        <section id="contact">
+            <h2>Resources</h2>
+            <p><a href="https://github.com/Code-JL/DNA-Sequence-Analyzer" target="_blank">
+                <img src="../../images/github.png" alt="GitHub Icon">GitHub Repository
+            </a></p>
+        </section>
+
+        <!-- License -->
+        <section class="project">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License. See the <a href="https://github.com/Code-JL/DNA-Sequence-Analyzer/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 DNA Sequence Analyzer</p>
+    </footer>
+
+    <canvas id="bg1"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
+    <script src="../projectsUniversal.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio Website</title>
+    <link rel="stylesheet" href="../../assets/load/universal.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <!-- Project Title -->
+        <section class="title">
+            <h1 id="type">Portfolio Website</h1>
+            <p>A modern, interactive portfolio website featuring dynamic animations and responsive design, built to showcase software development projects and professional experience.</p>
+        </section>
+
+        <!-- Technologies -->
+        <section class="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-grid">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Matter.js</span>
+                <span class="tech-badge">Git</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Interactive UI:</strong> Dynamic hexagonal background animation powered by Matter.js physics engine</li>
+                <li><strong>Responsive Design:</strong> Seamless experience across desktop, tablet, and mobile devices</li>
+                <li><strong>Professional Sections:</strong> Comprehensive project showcase, skills overview, and educational background</li>
+                <li><strong>Resource Access:</strong> Downloadable resume and direct contact information</li>
+            </ul>
+        </section>
+
+        <!-- Implementation -->
+        <section class="project">
+            <h2>Implementation</h2>
+            <h3>Project Structure</h3>
+            <pre><code>portfolio/
+├── assets/    # Core website assets
+│ ├── load/    # Universal components
+│ └── ...      # Page-specific assets
+├── files/     # Downloadable content
+├── images/    # Media assets
+└── projects/  # Project-specific pages</code></pre>
+        </section>
+
+        <!-- Development Status -->
+        <section class="project">
+            <h2>Development Status</h2>
+            <h3>Current Features</h3>
+            <ul>
+                <li>Interactive physics-based animations</li>
+                <li>Cross-device compatibility</li>
+                <li>Project documentation system</li>
+                <li>Professional content organization</li>
+            </ul>
+            <h3>Planned Enhancements</h3>
+            <ul>
+                <li>Additional project documentation</li>
+                <li>Enhanced interactive features</li>
+                <li>Expanded project gallery</li>
+            </ul>
+        </section>
+
+        <!-- Documentation -->
+        <section id="contact">
+            <h2>Resources</h2>
+            <p><a href="https://github.com/Code-JL/Code-JL.github.io" target="_blank">
+                <img src="../../images/github.png" alt="GitHub Icon">GitHub Repository
+            </a></p>
+            <p><a href="https://code-jl.github.io" target="_blank">
+                <img src="../../images/home.png" alt="Live Demo Icon">Live Demo
+            </a></p>
+        </section>
+
+        <!-- License -->
+        <section class="project">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License. See the <a href="https://github.com/Code-JL/Code-JL.github.io/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Portfolio Website</p>
+    </footer>
+
+    <canvas id="bg1"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/plugins/matter-wrap.min.js"></script>
+    <script src="../projectsUniversal.js"></script>
+</body>
+</html>
