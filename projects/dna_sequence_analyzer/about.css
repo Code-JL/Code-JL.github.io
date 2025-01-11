@@ -1,11 +1,25 @@
-/* Project Styling */
+:root {
+    --primary-blue: #1b4e7e;
+    --highlight-yellow: #e7df69;
+    --visited-orange: #dfa843;
+    --text-light: #eef6fc;
+    --code-bg: #2a2a2a;
+}
+
+/* Project Styling - keeping your original structure with enhancements */
 .project img {
     width: 70%;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin: 15px auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Technology Badges */
+.project img:hover {
+    transform: scale(1.02);
+}
+
+/* Technology Badges - preserving your layout */
 .tech-grid {
     display: flex;
     flex-wrap: wrap;
@@ -15,30 +29,36 @@
 }
 
 .tech-badge {
-    background: #1b4e7e;
-    color: #eef6fc;
+    background: var(--primary-blue);
+    color: var(--text-light);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 16px;
-    border: 2px solid #e7df69;
+    border: 2px solid var(--highlight-yellow);
+    transition: transform 0.3s ease;
 }
 
-/* Code Blocks */
+.tech-badge:hover {
+    transform: translateY(-2px);
+}
+
+/* Code Blocks - maintaining your styling */
 pre {
-    background: #2a2a2a;
+    background: var(--code-bg);
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
-    border-left: 3px solid #e7df69;
-    margin: 15px 0;
+    border-left: 3px solid var(--highlight-yellow);
+    margin: 15px auto;
+    width: 90%;
 }
 
 code {
-    color: #e7df69;
+    color: var(--highlight-yellow);
     font-family: 'Consolas', monospace;
 }
 
-/* Typography */
+/* Typography - keeping your sizes */
 li, p {
     font-size: 18px;
 }
@@ -56,7 +76,7 @@ h3 {
     text-align: left;
 }
 
-/* Contact Section */
+/* Contact Section - preserving your styling */
 section#contact p a img {
     width: 50px;
     height: 50px;
@@ -67,14 +87,21 @@ section#contact p a img {
 section#contact p a {
     font-family: 'rampage-monoline', sans-serif;
     font-size: 30px;
-    color: #e7df69;
+    color: var(--highlight-yellow);
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+section#contact p a:hover {
+    transform: translateX(10px);
 }
 
 section#contact p a:visited {
-    color: #dfa843;
+    color: var(--visited-orange);
 }
 
-
+/* Project Gallery - keeping your structure */
 .project-gallery {
     margin: 2rem 0;
     padding: 2rem;
@@ -113,9 +140,23 @@ figcaption {
     color: #ccc;
 }
 
+/* Center content sections */
+.project, section#contact {
+    width: 80%;
+    margin: 2rem auto;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery {
         grid-template-columns: 1fr;
     }
+    
+    .project, section#contact {
+        width: 90%;
+    }
+    
+    h1 { font-size: clamp(3rem, 8vw, 85px); }
+    h2 { font-size: clamp(2rem, 6vw, 55px); }
+    h3 { font-size: clamp(1.5rem, 4vw, 40px); }
 }
