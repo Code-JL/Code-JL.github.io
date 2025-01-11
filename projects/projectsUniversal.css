@@ -1,0 +1,127 @@
+:root {
+    --primary-blue: #1b4e7e;
+    --highlight-yellow: #e7df69;
+    --visited-orange: #dfa843;
+    --text-light: #eef6fc;
+    --code-bg: #2a2a2a;
+}
+
+/* Project Styling */
+.project img {
+    width: 70%;
+    border-radius: 8px;
+    margin: 15px auto;
+    transition: transform var(--transition-smooth);
+}
+
+.project img:hover {
+    transform: scale(1.02);
+}
+
+/* Technology Badges */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tech-badge {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 2px solid var(--highlight-yellow);
+    transition: transform var(--transition-smooth);
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+}
+
+/* Code Blocks */
+pre {
+    background: var(--code-bg);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    border-left: 3px solid var(--highlight-yellow);
+    margin: 15px auto;
+}
+
+code {
+    color: var(--highlight-yellow);
+    font-family: 'Consolas', monospace;
+}
+
+/* Typography */
+li, p { font-size: 18px; }
+h1 { font-size: 85px; }
+h2 { font-size: 55px; }
+h3 { 
+    font-size: 40px;
+    text-align: left;
+}
+
+/* Contact Section */
+section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: var(--highlight-yellow);
+    display: inline-flex;
+    align-items: center;
+    transition: transform var(--transition-smooth);
+}
+
+section#contact p a:hover {
+    transform: translateX(10px);
+}
+
+section#contact p a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+section#contact p a:visited {
+    color: var(--visited-orange);
+}
+
+/* Project Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 0;
+    transition: transform var(--transition-smooth);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 { font-size: clamp(3rem, 8vw, 85px); }
+    h2 { font-size: clamp(2rem, 6vw, 55px); }
+    h3 { font-size: clamp(1.5rem, 4vw, 40px); }
+}
