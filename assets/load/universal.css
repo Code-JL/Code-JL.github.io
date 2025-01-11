@@ -1,96 +1,119 @@
+/* CSS Custom Properties for consistent theming */
+:root {
+    --primary-color: #1e5c8f;
+    --secondary-color: #571194;
+    --accent-color: #e7df69;
+    --text-light: #eef6fc;
+    --text-dark: #001729;
+    --gradient-start: #6daae4;
+    --gradient-middle: #175792;
+    --gradient-end: #571194;
+    --nav-hover: #133653;
+    --section-bg: rgba(65, 65, 65, 0.95);
+    --transition-speed: 0.3s;
+}
+
 /* Fonts */
 @font-face {
-	font-family: 'rampage-monoline';
-	src: url('../../fonts/rampage-monoline.woff2') format('woff2'),
-		 url('../../fonts/rampage-monoline.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'rampage-monoline';
+    src: url('../../fonts/rampage-monoline.woff2') format('woff2'),
+         url('../../fonts/rampage-monoline.woff') format('woff');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'roboto';
-	src: url('../../fonts/roboto.woff2') format('woff2'),
-		 url('../../fonts/roboto.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'roboto';
+    src: url('../../fonts/roboto.woff2') format('woff2'),
+         url('../../fonts/roboto.woff') format('woff');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
 }
 
 title {
-	font-family: 'rampage-monoline', sans-serif;
+    font-family: 'rampage-monoline', sans-serif;
 }
 
 /* Header */
 header {
-	background: #1e5c8f; /* Deep navy blue */
-	color: #eef6fc; /* Light text */
-	padding: 15px 20px;
-	position: sticky; /* Sticks to the top when scrolling */
-	top: 0;
-	z-index: 1000; /* Stays above other elements */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
 }
 
 header nav ul li a img {
-	width: 30px;
-	height: 30px;
-	margin-right: 4px;
-	vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 
 nav ul {
-	list-style: none; /* Removes default list styling */
-	padding: 0;
-	margin: 0;
-	display: flex;
-	justify-content: center; /* Centers navigation items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-	margin-right: 15px;
+    margin-right: 15px;
 }
 
 nav ul li a {
-	font-family: 'rampage-monoline', sans-serif;
-	font-size: 30px;
-	color: #a9d3f5; /* Lighter blue */
-	text-decoration: none;
-	padding: 5px 10px;
-	border-radius: 5px;
-	transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: #a9d3f5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav ul li a:hover {
-	background: #133653; /* Slightly darker blue */
-	transform: scale(1.05);
+    background: var(--nav-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* General Styling */
 body {
-	font-family: 'roboto', sans-serif;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	color: #001729; /* Light blue text */
-	background: linear-gradient(to bottom, #6daae4, #175792, #571194); /* Gradient background */
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
 }
 
 h1, h2, h3 {
-	font-family: 'rampage-monoline', sans-serif;
-	color: #eef6fc; /* Light text for headings */
-	text-align: center;
+    font-family: 'rampage-monoline', sans-serif;
+    color: var(--text-light);
+    text-align: center;
 }
 
 /* Section Styling */
 section {
-	padding: 40px 20px;
-	margin: 20px auto;
-	max-width: 60%; /* Centers section content */
-	background: #414141; /* Medium blue */
-	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-	color: #eef6fc;
-	border-left: 3px solid #e7df69;
-    transition: transform 0.3s ease;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 60%;
+    background: var(--section-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    color: var(--text-light);
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 section:hover {
@@ -99,51 +122,68 @@ section:hover {
 
 /* Section Sizing */
 section.title {
-	width: 30%;
+    width: 30%;
 }
 
 /* Buttons and Links */
 .button {
-	display: inline-block;
-	text-decoration: none;
-	color: #eef6fc; /* Light blue text */
-	background: #1b4e7e; /* Dark blue button */
-	padding: 5px 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
-	background: #17456a; /* Slightly darker navy */
-	transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-	text-align: center;
-	padding: 15px 0;
-	background: #366c99; /* Deep navy blue */
-	color: #eef6fc;
+    text-align: center;
+    padding: 15px 0;
+    background: #366c99;
+    color: var(--text-light);
 }
 
+/* Canvas */
 canvas {
-	position: fixed;
-	top: 0;
-	left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #bg1 {
-	z-index: -1; /* Places canvas in the background */
-	filter: blur(1px); /* Adds blur effect */
+    z-index: -1;
+    filter: blur(1px);
 }
 
-/* Responsive Typography */
+/* Responsive Design */
 @media screen and (min-width: 500px) {
-	h1 {
-		font-size: 4rem;
-	}
-	h2 {
-		font-size: 2rem;
-	}
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        max-width: 90%;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        margin: 5px;
+    }
 }

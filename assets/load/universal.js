@@ -167,16 +167,21 @@ let hexBokeh = {
 
 // Wait for the DOM content to load and initialize HexBokeh
 window.addEventListener('DOMContentLoaded', () => {
-	Object.create(hexBokeh).init({
-		canvasSelector: '#bg1',
-		radiusRange: [15, 80],
-		colors: ['#571194', '#660066', '#000000', '#000099', '#193366'],
-		pixelsPerBody: 20000,
-		scrollVelocity: 0.01,
-		airFriction: 0.05,
-		opacity: 0.6
-	});
+    Object.create(hexBokeh).init({
+        canvasSelector: '#bg1',
+        radiusRange: [20, 90],
+        colors: [
+            'rgba(87, 17, 148, 0.6)',  // Purple
+            'rgba(30, 92, 143, 0.6)',  // Blue
+            'rgba(231, 223, 105, 0.4)', // Accent
+        ],
+        pixelsPerBody: 25000,
+        scrollVelocity: 0.015,
+        airFriction: 0.04,
+        opacity: 0.7
+    });
 });
+
 
 
 
