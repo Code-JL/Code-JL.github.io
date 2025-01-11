@@ -1,6 +1,6 @@
 // Wait for the DOM content to fully load
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('load/header.html') // Fetch the header HTML from the server
+    fetch('../header.html') // Fetch the header HTML from the server
         .then(response => response.text())
         .then(data => {
             document.querySelector('header').innerHTML = data; // Inject the header content
