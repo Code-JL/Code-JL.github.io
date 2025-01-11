@@ -1,7 +1,5 @@
 :root {
     --image-border: rgba(255, 255, 255, 0.1);
-    --highlight-color: #e7df69;
-    --visited-link: #dfa843;
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -34,29 +32,6 @@
     padding: 20px 0;
 }
 
-/* Typography Refinements */
-h1 { 
-    font-size: clamp(3rem, 8vw, 85px);
-    margin-bottom: 1rem;
-}
-
-h2 { 
-    font-size: clamp(2rem, 6vw, 55px);
-    background: linear-gradient(135deg, var(--highlight-color), #fff);
-	background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h3 { 
-    font-size: clamp(1.5rem, 4vw, 40px);
-}
-
-li, p { 
-    font-size: clamp(16px, 2vw, 18px);
-    line-height: 1.6;
-}
-
 /* Project Features List */
 .project ul {
     list-style: none;
@@ -74,50 +49,6 @@ li, p {
     position: absolute;
     left: 0;
     color: var(--highlight-color);
-}
-
-/* Enhanced Contact Section */
-#contact p a {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'rampage-monoline', sans-serif;
-    font-size: 30px;
-    color: var(--highlight-color);
-    transition: transform var(--transition-smooth);
-}
-
-#contact p a:hover {
-    transform: translateX(10px);
-}
-
-#contact p a img {
-    width: 50px;
-    height: 50px;
-    margin-right: 12px;
-    transition: transform var(--transition-smooth);
-}
-
-#contact p a:hover img {
-    transform: rotate(5deg);
-}
-
-#contact p a:visited {
-    color: var(--visited-link);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project img {
-        width: 90%;
-    }
-    
-    #contact p a {
-        font-size: 24px;
-    }
-    
-    .project ul li {
-        padding-left: 1.2em;
-    }
 }
 
 /* Animation for Project Sections */

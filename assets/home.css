@@ -2,8 +2,6 @@
 :root {
     --gallery-bg: rgba(255, 255, 255, 0.1);
     --border-color: #112c42;
-    --highlight-color: #e7df69;
-    --visited-link: #dfa843;
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -62,44 +60,12 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Enhanced Contact Section */
-#contact p a {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'rampage-monoline', sans-serif;
-    font-size: 30px;
-    color: var(--highlight-color);
-    transition: transform var(--transition-smooth);
-}
-
-#contact p a:hover {
-    transform: translateX(10px);
-}
-
-#contact p a img {
-    width: 50px;
-    height: 50px;
-    margin-right: 12px;
-    transition: transform var(--transition-smooth);
-}
-
-#contact p a:hover img {
-    transform: rotate(5deg);
-}
-
-/* Typography Refinements */
-h1 { font-size: clamp(3rem, 8vw, 85px); }
-h2 { font-size: clamp(2rem, 6vw, 55px); }
-h3 { font-size: clamp(1.5rem, 4vw, 40px); }
-li, p { font-size: clamp(16px, 2vw, 18px); }
-
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Design */
 @media (min-width: 900px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -109,9 +75,5 @@ li, p { font-size: clamp(16px, 2vw, 18px); }
 @media (max-width: 768px) {
     #home {
         width: 80%;
-    }
-    
-    #contact p a {
-        font-size: 24px;
     }
 }

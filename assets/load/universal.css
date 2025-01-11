@@ -11,6 +11,11 @@
     --nav-hover: #133653;
     --section-bg: rgba(65, 65, 65, 0.95);
     --transition-speed: 0.3s;
+    --visited-link: #dfa843;
+
+    --highlight-color: #e7df69;
+    --visited-color: #dfa843;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Fonts */
@@ -32,8 +37,37 @@
     font-style: normal;
 }
 
-title {
+/* General Styling */
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+}
+
+/* Typography */
+h1, h2, h3 {
     font-family: 'rampage-monoline', sans-serif;
+    color: var(--text-light);
+    text-align: center;
+}
+
+h1 {
+    font-size: 85px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+li, p {
+    font-size: 18px;
 }
 
 /* Header */
@@ -47,13 +81,6 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     transition: all var(--transition-speed) ease;
-}
-
-header nav ul li a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 4px;
-    vertical-align: middle;
 }
 
 nav ul {
@@ -86,20 +113,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* General Styling */
-body {
-    font-family: 'roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
-}
-
-h1, h2, h3 {
-    font-family: 'rampage-monoline', sans-serif;
-    color: var(--text-light);
-    text-align: center;
+header nav ul li a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 
 /* Section Styling */
@@ -120,9 +138,26 @@ section:hover {
     transform: translateX(10px);
 }
 
-/* Section Sizing */
 section.title {
     width: 30%;
+}
+
+/* Contact Section Styling */
+section#contact p a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+section#contact p a {
+    font-family: 'rampage-monoline', sans-serif;
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+section#contact p a:visited {
+    color: var(--visited-link);
 }
 
 /* Buttons and Links */
@@ -185,5 +220,9 @@ canvas {
     
     nav ul li {
         margin: 5px;
+    }
+
+    #contact p a {
+        font-size: 24px;
     }
 }
