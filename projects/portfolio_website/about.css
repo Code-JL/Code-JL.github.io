@@ -73,3 +73,49 @@ section#contact p a {
 section#contact p a:visited {
     color: #dfa843;
 }
+
+
+.project-gallery {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
