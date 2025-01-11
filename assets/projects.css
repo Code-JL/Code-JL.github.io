@@ -43,6 +43,7 @@ h1 {
 h2 { 
     font-size: clamp(2rem, 6vw, 55px);
     background: linear-gradient(135deg, var(--highlight-color), #fff);
+	background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
