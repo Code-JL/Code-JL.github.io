@@ -20,6 +20,20 @@ section {
 	width: 50%;
 }
 
+/* School Header Styling */
+.school-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.school-crest {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 /* List and Link Styling */
 li a {
 	color: #e7df69; /* Bright yellow text for links */
