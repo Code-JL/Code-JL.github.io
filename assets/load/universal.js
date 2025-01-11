@@ -7,6 +7,29 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Set active nav link based on current page
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+        
+        // Add hover effect
+        link.addEventListener('mouseenter', (e) => {
+            const img = e.currentTarget.querySelector('img');
+            img.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+        
+        link.addEventListener('mouseleave', (e) => {
+            const img = e.currentTarget.querySelector('img');
+            img.style.transform = 'scale(1) rotate(0deg)';
+        });
+    });
+});
+
 // Include the 'matter-wrap' plugin
 Matter.use('matter-wrap');
 
