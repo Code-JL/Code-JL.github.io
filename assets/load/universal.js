@@ -14,27 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        // Determine the page the link is pointing to
+        const linkPage = link.getAttribute('href').split('/').pop();
+    
+        // Add 'active' class if the link matches the current page
+        if (linkPage === currentPage) {
             link.classList.add('active');
         }
-        
+    
         // Add hover effect
         link.addEventListener('mouseenter', (e) => {
             const img = e.currentTarget.querySelector('img');
             img.style.transform = 'scale(1.1) rotate(5deg)';
         });
-        
+    
         link.addEventListener('mouseleave', (e) => {
             const img = e.currentTarget.querySelector('img');
             img.style.transform = 'scale(1) rotate(0deg)';
         });
     });
     
+    
+    // Toggle mobile navigation
     menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
         navMenu.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', 
-            menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-        );
     });
 
     // Close menu when clicking outside
