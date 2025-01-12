@@ -5,12 +5,6 @@
     padding: 20px;
 }
 
-/* Typography */
-li, p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
 /* Title Section */
 .title {
     text-align: center;

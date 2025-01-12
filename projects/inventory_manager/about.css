@@ -15,5 +15,21 @@
 @media (max-width: 768px) {
     .version-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .version {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .version-container {
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .version {
+        padding: 0.8rem;
     }
 }

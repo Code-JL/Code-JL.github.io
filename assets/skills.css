@@ -1,15 +1,18 @@
 :root {
     --grid-bg: rgba(255, 255, 255, 0.1);
+    --grid-hover-bg: rgba(255, 255, 255, 0.15);
+    --highlight-hover: #e7df69;
 }
 
-/* Link Styling */
-li a {
-    text-decoration: none;
-    transition: color var(--transition-smooth);
+/* Title Section */
+.title {
+    text-align: center;
+    margin: 40px 0;
 }
 
-li a:hover {
-    color: var(--visited-color);
+#type {
+    font-size: 2.5rem;
+    color: var(--text-light);
 }
 
 /* Grid Layout */
@@ -26,23 +29,25 @@ li a:hover {
     padding: 25px;
     border-radius: 12px;
     backdrop-filter: blur(8px);
-    transition: transform var(--transition-smooth);
-    animation: fadeIn 0.6s ease-out;
+    transition: transform var(--transition-smooth), background var(--transition-smooth);
+    animation: fadeIn 0.6s ease-out both;
 }
 
 .grid-item:hover {
     transform: translateY(-5px);
+    background: var(--grid-hover-bg);
 }
 
-.grid-item ul {
-    list-style: none;
-    padding: 0;
+.grid-item h2 {
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
 .grid-item ul li {
-    padding: 8px 0;
+    padding: 8px 0 8px 25px;
     position: relative;
-    padding-left: 25px;
+    color: var(--text-light);
 }
 
 .grid-item ul li::before {
@@ -52,9 +57,95 @@ li a:hover {
     color: var(--highlight-color);
 }
 
+/* Contact Section */
+#contact {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background: var(--grid-bg);
+    border-radius: 12px;
+}
+
+#contact img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#contact a {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color var(--transition-smooth);
+}
+
+#contact a:hover {
+    color: var(--highlight-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
         width: 90%;
+        gap: 16px;
+    }
+
+    .grid-item {
+        padding: 20px;
+    }
+
+    .grid-item h2 {
+        font-size: 1.4rem;
+    }
+
+    #type {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        width: 95%;
+        gap: 12px;
+    }
+
+    .grid-item {
+        padding: 15px;
+    }
+
+    .grid-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .grid-item ul li {
+        font-size: 0.9rem;
+        padding: 5px 0 5px 18px;
+    }
+
+    #type {
+        font-size: 1.8rem;
     }
 }

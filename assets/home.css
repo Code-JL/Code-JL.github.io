@@ -1,11 +1,11 @@
-/* Modern Variables */
 :root {
     --gallery-bg: rgba(255, 255, 255, 0.1);
     --border-color: #112c42;
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --text-light: #e7df69; /* For figcaption text color */
 }
 
-/* Enhanced Hero Section */
+/* Hero Section */
 #home {
     width: 40%;
     animation: fadeIn 1s ease-out;
@@ -22,10 +22,24 @@
     font-weight: 600;
 }
 
-/* Modernized Gallery */
+/* Projects Section */
+#projects ul {
+    padding: 0; /* Reset handled globally, but keeping specific for this section */
+    margin: 20px 0;
+}
+
+#projects li {
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    background: var(--gallery-bg);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -33,7 +47,6 @@
 }
 
 .gallery figure {
-    margin: 0;
     padding: 1.5rem;
     background: var(--gallery-bg);
     border-radius: 12px;
@@ -60,12 +73,48 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.gallery figcaption {
+    margin: 10px 0;
+    color: var(--text-light);
 }
 
+/* Skills Section */
+#skills ul {
+    padding: 0;
+}
+
+#skills li {
+    margin: 10px 0;
+    padding: 8px;
+    background: var(--gallery-bg);
+    border-radius: 6px;
+}
+
+/* General Sections */
+#education, #contact {
+    margin: 40px 0;
+}
+
+#contact img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
 @media (min-width: 900px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -75,5 +124,33 @@
 @media (max-width: 768px) {
     #home {
         width: 80%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .gallery figure {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        width: 95%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    #projects li {
+        padding: 10px;
     }
 }

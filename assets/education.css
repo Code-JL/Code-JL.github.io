@@ -1,3 +1,4 @@
+/* Base Styles */
 section {
     width: 50%;
 }
@@ -19,4 +20,49 @@ section {
 /* List and Link Styling */
 li a {
     color: #e7df69;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    .school-header {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .school-header h2 {
+        font-size: clamp(24px, 6vw, 32px);
+    }
+
+    .school-crest {
+        width: 50px;
+        height: 50px;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    section {
+        width: 95%;
+    }
+
+    .school-header {
+        gap: 0.8rem;
+    }
+
+    .school-crest {
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -15,6 +15,7 @@
     font-style: normal;
 }
 
+/* Root Variables */
 :root {
     --primary-color: #1e5c8f;
     --primary-dark: #133653;
@@ -126,57 +127,6 @@ nav ul li {
     border-color: var(--accent-color);
 }
 
-@media screen and (max-width: 768px) {
-    .nav-container {
-        padding: 0 10px;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 5px;
-    }
-    
-    nav ul li {
-        margin: 5px;
-    }
-    
-    .nav-link {
-        padding: 8px 12px;
-        font-size: 24px;
-    }
-    
-    .nav-link img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.nav-container::before,
-.nav-container::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15%;
-    height: 40px;
-    background: 
-        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a);
-    background-size: 20px 40px;
-    opacity: 0.5;
-}
-
-.nav-container::before {
-    left: 2%;
-}
-
-.nav-container::after {
-    right: 2%;
-}
-
 /* Content Container */
 .container {
     max-width: 800px;
@@ -211,11 +161,6 @@ section h2::after {
     height: 3px;
     background: var(--link-blue);
     border-radius: 2px;
-}
-
-section ul {
-    margin: 0;
-    padding-left: 20px;
 }
 
 /* General Styling */
@@ -270,16 +215,56 @@ footer img {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
-/* Responsive Design */
-@media screen and (min-width: 500px) {
-    h1 { font-size: 4rem; }
-    h2 { font-size: 2rem; }
-}
-
+/* Enhanced Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    nav ul li {
+        margin: 5px;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 24px;
+    }
+    
+    .nav-link img {
+        width: 20px;
+        height: 20px;
+    }
+
     .container {
         margin: 10px;
-        padding: 20px;
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 5px;
+        padding: 12px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
     }
 }
 

@@ -1,18 +1,55 @@
 :root {
     --image-border: rgba(255, 255, 255, 0.1);
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-hover: rgba(255, 255, 255, 0.2);
 }
 
-/* Project Section Styling */
+/* Title Section */
+.title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.title h1 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.title p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+/* Project Section */
 .project {
+    background: var(--button-bg); /* Matches button background for consistency */
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(8px);
     transition: transform var(--transition-smooth);
+    animation: slideIn 0.6s ease-out both;
 }
 
 .project:hover {
     transform: translateX(15px);
 }
 
-/* Enhanced Image Styling */
+.project h2 {
+    color: var(--highlight-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.project p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Image Styling */
 .project img {
     width: 70%;
     border-radius: 12px;
@@ -34,14 +71,15 @@
 
 /* Project Features List */
 .project ul {
-    list-style: none;
-    padding-left: 0;
+    padding: 0; /* Resets handled globally */
+    margin: 20px 0;
 }
 
 .project ul li {
     position: relative;
     padding-left: 1.5em;
     margin-bottom: 0.5em;
+    color: var(--text-light);
 }
 
 .project ul li::before {
@@ -51,12 +89,24 @@
     color: var(--highlight-color);
 }
 
-/* Animation for Project Sections */
-.project {
-    animation: slideIn 0.6s ease-out;
-    animation-fill-mode: both;
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px 10px 10px 0;
+    background: var(--button-bg);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all var(--transition-smooth);
 }
 
+.button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* Keyframe Animation */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -65,5 +115,66 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .project img {
+        width: 85%;
+    }
+
+    .project h2 {
+        font-size: 1.5rem;
+    }
+
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title p {
+        font-size: 1.1rem;
+    }
+
+    .button {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .project h2 {
+        font-size: 1.3rem;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    .project ul li {
+        font-size: 0.9rem;
+    }
+
+    .project p {
+        font-size: 0.95rem;
     }
 }
