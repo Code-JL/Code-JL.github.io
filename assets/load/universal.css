@@ -12,7 +12,6 @@
     --section-bg: rgba(65, 65, 65, 0.95);
     --transition-speed: 0.3s;
     --visited-link: #dfa843;
-
     --highlight-color: #e7df69;
     --visited-color: #dfa843;
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,6 +76,16 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 10px;
+    cursor: pointer;
 }
 
 .main-nav {
@@ -170,32 +179,6 @@ nav ul li {
     border-color: var(--accent-color);
 }
 
-@media screen and (max-width: 768px) {
-    .nav-container {
-        padding: 0 10px;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 5px;
-    }
-    
-    nav ul li {
-        margin: 5px;
-    }
-    
-    .nav-link {
-        padding: 8px 12px;
-        font-size: 24px;
-    }
-    
-    .nav-link img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
 .nav-container::before,
 .nav-container::after {
     content: '';
@@ -220,7 +203,6 @@ nav ul li {
 .nav-container::after {
     right: 2%;
 }
-
 
 /* Section Styling */
 section {
@@ -300,7 +282,83 @@ canvas {
     filter: blur(1px);
 }
 
-/* Responsive Design */
+/* Enhanced Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Typography adjustments */
+    h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+    h2 { font-size: clamp(2rem, 6vw, 2.5rem); }
+    h3 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    li, p { font-size: 16px; }
+
+    /* Mobile navigation */
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .nav-container {
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 92, 143, 0.95);
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        font-size: 20px;
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+
+    /* Section adjustments */
+    section {
+        max-width: 95%;
+        padding: 20px 15px;
+        margin: 10px auto;
+    }
+
+    section.title {
+        width: 90%;
+    }
+
+    /* Contact section adjustments */
+    section#contact p a {
+        font-size: 20px;
+    }
+
+    section#contact p a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Navigation container decorative elements */
+    .nav-container::before,
+    .nav-container::after {
+        display: none;
+    }
+}
+
+/* Existing media queries */
 @media screen and (min-width: 500px) {
     h1 {
         font-size: 4rem;

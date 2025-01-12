@@ -17,10 +17,41 @@ li, p {
     margin-bottom: 50px;
 }
 
-/* Responsive Design */
+/* Enhanced Mobile Responsiveness */
 @media (max-width: 768px) {
     .story, .programming-journey, .education, .personal-growth, .philosophy {
         width: 90%;
-        margin: 20px auto;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    /* Improved Typography for Mobile */
+    p {
+        font-size: clamp(14px, 3.5vw, 18px);
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: clamp(24px, 6vw, 32px);
+        margin-bottom: 15px;
+    }
+
+    /* Contact Section Mobile Optimization */
+    #contact h2 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+    /* Adjust Section Spacing */
+    .title {
+        margin-bottom: 25px;
+    }
+}
+
+/* Additional Mobile Optimization */
+@media (max-width: 480px) {
+    .story, .programming-journey, .education, .personal-growth, .philosophy {
+        width: 95%;
+        margin: 10px auto;
+        padding: 12px;
     }
 }

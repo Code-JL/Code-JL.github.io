@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Set active nav link based on current page
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
     const currentPage = window.location.pathname.split('/').pop();
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -28,7 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
             img.style.transform = 'scale(1) rotate(0deg)';
         });
     });
+    
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', 
+            menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.main-nav')) {
+            navMenu.classList.remove('show');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
 });
+
 
 // Include the 'matter-wrap' plugin
 Matter.use('matter-wrap');
