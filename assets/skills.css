@@ -4,17 +4,6 @@
     --highlight-hover: #e7df69;
 }
 
-/* Title Section */
-.title {
-    text-align: center;
-    margin: 40px 0;
-}
-
-#type {
-    font-size: 2.5rem;
-    color: var(--text-light);
-}
-
 /* Grid Layout */
 .grid-container {
     display: grid;
@@ -38,11 +27,6 @@
     background: var(--grid-hover-bg);
 }
 
-.grid-item h2 {
-    color: var(--highlight-color);
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
 
 .grid-item ul li {
     padding: 8px 0 8px 25px;
@@ -55,35 +39,6 @@
     position: absolute;
     left: 0;
     color: var(--highlight-color);
-}
-
-/* Contact Section */
-#contact {
-    text-align: center;
-    margin: 40px 0;
-    padding: 20px;
-    background: var(--grid-bg);
-    border-radius: 12px;
-}
-
-#contact img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-#contact a {
-    display: inline-flex;
-    align-items: center;
-    margin: 10px;
-    color: var(--text-light);
-    text-decoration: none;
-    transition: color var(--transition-smooth);
-}
-
-#contact a:hover {
-    color: var(--highlight-hover);
 }
 
 /* Footer */

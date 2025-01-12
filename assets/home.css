@@ -2,7 +2,6 @@
     --gallery-bg: rgba(255, 255, 255, 0.1);
     --border-color: #112c42;
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --text-light: #e7df69; /* For figcaption text color */
 }
 
 /* Hero Section */
@@ -24,7 +23,7 @@
 
 /* Projects Section */
 #projects ul {
-    padding: 0; /* Reset handled globally, but keeping specific for this section */
+    padding: 0;
     margin: 20px 0;
 }
 
@@ -75,12 +74,13 @@
 
 .gallery figcaption {
     margin: 10px 0;
-    color: var(--text-light);
+    color: var(--accent-color);
 }
 
 /* Skills Section */
 #skills ul {
     padding: 0;
+    list-style: none;
 }
 
 #skills li {
@@ -91,10 +91,6 @@
 }
 
 /* General Sections */
-#education, #contact {
-    margin: 40px 0;
-}
-
 #contact img {
     width: 24px;
     height: 24px;

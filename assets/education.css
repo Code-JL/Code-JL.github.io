@@ -22,6 +22,25 @@ li a {
     color: #e7df69;
 }
 
+ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-light);
+
+}
+
+ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--text-light);
+}
+
+.achievements li::before {
+    color: var(--accent-color);
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     section {
