@@ -77,6 +77,20 @@ code {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+section ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+
+}
+
+section ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
 /* Contact Section */
 section#contact p a {
     display: inline-flex;

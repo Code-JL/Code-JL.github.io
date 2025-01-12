@@ -12,13 +12,11 @@
 
 /* Project Section */
 .project {
-    background: var(--button-bg); /* Matches button background for consistency */
+    background: var(--button-bg);
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
     backdrop-filter: blur(8px);
-    transition: transform var(--transition-smooth);
-    animation: slideIn 0.6s ease-out both;
 }
 
 .project:hover {
